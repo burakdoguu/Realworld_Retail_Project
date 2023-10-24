@@ -1,0 +1,12 @@
+apache-airflow-providers-apache-spark
+pyspark==3.4.0
+pandas
+celery
+cassandra-driver
+requests
+WTForms
+snowflake-connector-python
+SQLAlchemy
+dbt-snowflake==1.5.0
+kafka-python==2.0.2
+dbt-airflow

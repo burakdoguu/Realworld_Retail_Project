@@ -1,0 +1,8 @@
+FROM bitnami/spark:3.4
+USER root
+RUN apt-get update \
+    && mkdir -p /var/lib/apt/lists/partial \
+    && apt-get install curl -y
+
+COPY ./requirements_spark.txt /
+RUN pip install -r /requirements_spark.txt

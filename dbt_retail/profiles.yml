@@ -1,0 +1,13 @@
+dbt_retail:
+  outputs:
+    dev:
+      account: gekolij-jf87871
+      database: VIEWS_ORDERS
+      password: dbtPassword123
+      role: transform
+      schema: DEV
+      threads: 1
+      type: snowflake
+      user: dbt_retail
+      warehouse: RETAIL
+  target: dev

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: views_orders
+    schema: raw
+    tables:
+      - name: orders
+        identifier: order_data
+      
+      - name: views
+        identifier: view_data
+      
+      - name: category
+        identifier: product_category
+        
