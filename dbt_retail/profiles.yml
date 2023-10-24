@@ -1,9 +1,9 @@
 dbt_retail:
   outputs:
     dev:
-      account: gekolij-jf87871
+      account: {your_account_name}
       database: VIEWS_ORDERS
-      password: dbtPassword123
+      password: {your_password}
       role: transform
       schema: DEV
       threads: 1
