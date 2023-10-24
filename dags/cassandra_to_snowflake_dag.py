@@ -11,11 +11,7 @@ from datetime import timedelta
 
 
 spark_master = "spark://spark-master:7077"
-#pack1 = "/opt/airflow/jars/spark-cassandra-connector_2.12-3.2.0.jar,/opt/airflow/jars/spark-core_2.12-3.2.3.jar,/opt/airflow/jars/spark-core_2.12-3.2.3.jar "
-#pack2 = "/opt/airflow/jars/spark-core_2.12-3.2.3.jar "
-#pack3 = "/opt/airflow/jars/spark-sql_2.12-3.2.3.jar"
 
-#/opt/bitnami/spark/jars/spark-snowflake_2.12-2.10.0-spark_3.2.jar
 
 with DAG(
     dag_id='cassandra_to_snowflake',
@@ -66,9 +62,3 @@ with DAG(
     start >> [spark_job_order,spark_job_view] >> retail_dbt >> end
   
 
-
-#retail_dbt = BashOperator(
-#    task_id="retail_dbt",
-#    bash_command='dbt run',
-#)
-        
