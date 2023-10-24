@@ -100,6 +100,3 @@ def spark_process():
 if __name__ == '__main__':
     spark_process()
 
-
-        #.option("column_mapping", "name") \
-        #.option("column_mismatch_behavior", "ignore") \
