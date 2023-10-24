@@ -12,10 +12,8 @@ def spark_process():
      .config("spark.cassandra.auth.username", "cassandra") \
      .config("spark.cassandra.auth.password", "cassandra") \
      .getOrCreate() 
-#     .config("spark.sql.extensions","com.datastax.spark.connector.CassandraSparkExtensions") \
-     
-#     .config("spark.jars.packages", "com.datastax.spark:spark-cassandra-connector_2.12:3.4.0") \ 
-#    
+
+
     schema_orders = StructType([
         StructField("event", StringType()),
         StructField("messageid", StringType()),
