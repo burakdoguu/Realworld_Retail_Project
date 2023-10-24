@@ -75,9 +75,9 @@ def spark_process():
 
 
     sfOptions = {
-        "sfURL": "https://gekolij-jf87871.snowflakecomputing.com/",
+        "sfURL": "https://{your_account_name}.snowflakecomputing.com/",
         "sfUser": "dbt_retail",
-        "sfPassword": "dbtPassword123",
+        "sfPassword": "{your_password}",
         "sfDatabase": "VIEWS_ORDERS",
         "sfSchema": "RAW",
         "sfWarehouse": "RETAIL",
