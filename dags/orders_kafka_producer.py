@@ -21,7 +21,7 @@ def orders_data():
             message_id = str(item['messageid'])
             order_id = int(item['orderid'])
             timestamp = str(int(time.time()))
-            producer = KafkaProducer(bootstrap_servers=['192.168.1.105:9092'],value_serializer=lambda m: json.dumps(m).encode('utf-8'),acks='all',retries=1)
+            producer = KafkaProducer(bootstrap_servers=['{your_ip}:9092'],value_serializer=lambda m: json.dumps(m).encode('utf-8'),acks='all',retries=1)
             producer.send('order_topic', {"event": event_name, "messageid": message_id, "userid": user_id, "lineitems": line_items,
                     "orderid": order_id, "timestamp": timestamp})
             producer.flush()
