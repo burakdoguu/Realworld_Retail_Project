@@ -25,7 +25,7 @@ class CassandraConnector:
 def fetch_and_insert_data_views():
 
     consumer = KafkaConsumer('view_product_topic', 
-                             bootstrap_servers=['192.168.1.105:9092'],
+                             bootstrap_servers=['{your_ip}:9092'],
                              auto_offset_reset='earliest'
                              #group_id='orders_group',
                              #value_deserializer=lambda x: json.loads(x.decode('utf-8'))
